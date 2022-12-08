@@ -25,7 +25,7 @@ disp(pixel);
 x = double(squeeze(hyper_data(i,j,:)))';
 for k = 1:1:size(spectSigns,2)
     s = spectSigns(:,k);
-    costMap_SMF(i,j,k) = ((s-mean_b)*(Cb\(x-mean_b)'))/((a-mean_b)*(Cb\(s-mean_b)'));
+    costMap_SMF(i,j,k) = ( (s-mean_b)*(Cb\(x -mean_b)') ) / ((s-mean_b)*(Cb\(s -mean_b)') );
 end
     end
 end
